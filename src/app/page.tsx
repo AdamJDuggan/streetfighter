@@ -1,8 +1,8 @@
-import prisma from "../../lib/prisma";
+import prisma from "./lib/prisma";
 
 async function getPosts() {
-  const posts = await prisma.posts.findMany({
-    where: { published: true },
+  const posts = await prisma.post.findMany({
+    where: { published: false },
     include: {
       author: {
         select: { name: true },
@@ -15,6 +15,10 @@ async function getPosts() {
 export default async function Home() {
   const posts = await getPosts();
 
-  console.log({ posts });
-  return <div>HELLO</div>;
+  return (
+    <div>
+      HELLO
+      {posts[0].title}
+    </div>
+  );
 }
