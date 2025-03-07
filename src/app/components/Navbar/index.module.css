@@ -1,0 +1,19 @@
+.navbarContainer {
+  position: sticky;
+  position: sticky;
+  top: 0px;
+  display: grid;
+  place-items: center;
+  background-color: transparent;
+  z-index: 1;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  width: 100%;
+}

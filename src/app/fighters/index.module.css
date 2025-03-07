@@ -1,0 +1,15 @@
+.fightersGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  left: 0;
+}
+
+.card:not(:first-child) {
+  margin-left: -55px;
+}
